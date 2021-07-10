@@ -1,3 +1,3 @@
 :lol
-node msv
+node gen
 goto lol
