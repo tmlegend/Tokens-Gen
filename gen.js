@@ -219,7 +219,7 @@ async function create_accinfos(browser, d) {
 }
 
 (async () => {
-  console.log("BNGop");
+  console.log("MSVop");
   const browser = await puppeteer.launch(BROWSER_CONFIG);
 
   try {
