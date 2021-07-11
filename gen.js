@@ -10,10 +10,9 @@ const fs = require('fs')
 const { Console } = require('console')
 
 // Settings
-
-const captchakey = 'ad99014034f321ec965a44ef08ad43f9'
+const captchakey = ''
 const PROXY_ADDR = ''
-const PROXY_USERNAME = 'MSV OP'
+const PROXY_USERNAME = ''
 const PROXY_PASSWORD = ''
 const BROWSER_CONFIG = {
   args: [
@@ -215,11 +214,11 @@ async function create_accinfos(browser, d) {
     await DiscordPage.reload({ waitUntil: ["networkidle0", "domcontentloaded"] });
   };
 
-  return `${token}`;
+  return `${email}:${username}:${password}:${token}`;
 }
 
 (async () => {
-  console.log("MSVop");
+  console.log("======");
   const browser = await puppeteer.launch(BROWSER_CONFIG);
 
   try {
@@ -256,14 +255,12 @@ async function check_proxy(file){
     output: process.stdout,
     console: true
   });
-
   for await (const line of rl) {
     var s = line.split(":");
     if(s.length == 0){
       continue;
     }
   };
-
   return proxy;
 }
 */
