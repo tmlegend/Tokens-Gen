@@ -214,7 +214,7 @@ async function create_accinfos(browser, d) {
     await DiscordPage.reload({ waitUntil: ["networkidle0", "domcontentloaded"] });
   };
 
-  return `${email}:${username}:${password}:${token}`;
+  return `${password}:${token}`;
 }
 
 (async () => {
